@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view>
+  <navigator url="../comwx/comwx">
+    <button class="btn" type="primary" id="toComWx">报修下单</button>
+  </navigator>
+  <navigator url="../comShop/comShop">
+    <button class="btn" type="primary" id="toComShop">配件商城</button>  
+  </navigator>
+  
+</view>

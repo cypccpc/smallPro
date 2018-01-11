@@ -1,0 +1,41 @@
+<view class="mcontainer">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="section userinput">
+      <view class="section-group">
+        <label for="inp0">报修分类:</label>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{bArray}}">
+          <view class="picker">
+            {{bArray[index]}}
+          </view>
+        </picker>
+      </view>
+      <view class="section-group">
+        <label for="inp1">联系人:</label>
+        <input id="inp1" name="name" placeholder="请输入您的姓名" />   
+      </view>
+      <view class="section-group">
+        <label for="inp2">联系电话</label>
+        <input id="inp2" name="phone" placeholder="请输入您的手机号" />
+      </view>
+      <view class="section-group">
+        <label for="inp3">维修种类:</label>  
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{xArray}}">
+          <view class="picker">
+            {{xArray[index]}}
+          </view>
+        </picker>
+      </view>
+      <view class="section-group">
+        <label for="inp4">位置:</label>
+        <input id="inp4" name="addr" placeholder="点击获取您的位置" bindfocus='getCurrentLocation' value="{{currentLocation}}"/>
+      </view>
+      <view class="section-group">
+        <label for="inp5">留言:</label>
+        <input id="inp5" name="summary" placeholder="请填写，不超过40字" />
+      </view>
+    </view>
+    <view class="btn-area">
+      <button type="primary" class="btn" formType="submit">提交</button>
+    </view>
+  </form>
+</view>
